@@ -15,8 +15,7 @@ public class JavaApplication2 {
         new Square();
         System.out.println("");
         System.out.println("");
-        new Triangle();
-        
+        new Triangle();        
     }
     
 }
