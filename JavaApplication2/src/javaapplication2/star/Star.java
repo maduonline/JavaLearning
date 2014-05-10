@@ -6,8 +6,6 @@ package javaapplication2.star;
  */
 public class Star {
 
-    private Boolean lineLoopRun = false;
-
     private boolean runTest(int y, int a) {
         if (y == 1) {
             if (a < 5) {
