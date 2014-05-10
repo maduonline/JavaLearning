@@ -6,16 +6,40 @@ package javaapplication2.star;
  */
 public class Star {
 
+    private Boolean lineLoopRun = false;
+
+    private boolean runTest(int y, int a) {
+        if (y == 1) {
+            if (a < 5) {
+                return true;
+            }
+            return false;
+        } else {
+            if (a > 0) {
+                return true;
+            }
+            return false;
+        }
+    }
+
     public void square() {
-        for (int a = 1; a < 5;) {
-            for (int b = 4; b > a; b--) {
-                System.out.print(" ");
+        int y = 1;
+        for (int x = 1; x < 3; x++) {
+            for (int a = y; runTest(y, a);) {
+                for (int b = 4; b > a; b--) {
+                    System.out.print(" ");
+                }
+                for (int c = 1; c < (a + 1); c++) {
+                    System.out.print("* ");
+                }
+                System.out.println("");
+                if (y == 1) {
+                    a++;
+                } else {
+                    a--;
+                }
             }
-            for (int c = 1; c < (a + 1); c++) {
-                System.out.print("* ");
-            }
-            System.out.println("");
-            a++;
+            y = 3;
         }
     }
 }
